@@ -1,0 +1,248 @@
+<h1 align="center">Errata for "CIL Programming:  Under the Hood of .NET"</h1>
+
+<h2>Directives Quick Reference, Front Cover</h2>
+
+<h3>Found by:  Jason Bock</h3>
+<h3>Added:  08/15/2002</h3>
+
+<p>
+For the .size directive, change this:
+</p>
+
+<p>
+"UDefines a block of memory in a class"
+</p>
+
+<p>
+to this:
+</p>
+
+<p>
+"<b>Defines</b> a block of memory in a class"
+</p>
+
+
+<h2>Chapter 2, "beforefieldinit Redux" section, page 51</h2>
+
+<h3>Found by:  Jesse Liberty</h3>
+<h3>Added:  08/15/2002</h3>
+
+<p>
+In the first paragraph, change this:
+</p>
+
+<p>
+"...there's no reason to let the runtime be more efficient..."
+</p>
+
+<p>
+to this:
+</p>
+
+<p>
+"...there's no reason <b>not</b> to let the runtime be more efficient..."
+</p>
+
+
+<h2>Chapter 2, "Overriding Methods" section, page 60</h2>
+
+<h3>Found by:  Jurgen Piller</h3>
+<h3>Added:  08/15/2002</h3>
+
+<p>
+The abstract method example is correct, but the wording of the classes (and the following paragraph) may confuse matters.  Replace this:
+</p>
+
+<p>
+"ImplementationClass decides to implement this method by providing a virtual method with the correct signature."
+</p>
+
+<p>
+with this:
+</p>
+
+<p>
+"ImplementationClass decides to implement this method by providing a virtual method with the correct signature.  <b>Note that while AbstractMethod() is not defined as abstract in ImplementationClass, the class itself is still abstract.</b>"
+</p>
+
+<h2>Chapter 2, "Overriding Methods" section, page 60</h2>
+
+<h3>Found by:  Louis Gutnicki</h3>
+<h3>Added:  11/18/2002</h3>
+
+<p>
+Change this:
+</p>
+
+<p>
+.class public SubClassNewSlot<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;extends BaseClassNewSlot
+</p>
+
+<p>
+to this:
+</p>
+
+<p>
+.class public SubClassNewSlot<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;extends <b>BaseClassNewSlot</b>
+</p>
+
+<h2>Chapter 2, "Overriding Methods" section, page 61</h2>
+
+<h3>Found by:  Louis Gutnicki</h3>
+<h3>Added:  11/18/2002</h3>
+
+<p>
+Change this:
+</p>
+
+<p>
+"...that will not override BaseClassSlot.BaseMethod()."
+</p>
+
+<p>
+to this:
+</p>
+
+<p>
+"...that will not override <b>BaseClassNewSlot</b>.BaseMethod()."
+</p>
+
+<h2>Chapter 3, Introduction section, page 69</h2>
+
+<h3>Found by:  Jason Bock</h3>
+<h3>Added:  08/15/2002</h3>
+
+<p>
+Change this:
+</p>
+
+<p>
+"I'll start by showing you how the virtual execution stack..."
+</p>
+
+<p>
+to this:
+</p>
+
+<p>
+"I'll start by showing you how the <b>evaluation</b> stack..."
+</p>
+
+<h2>Chapter 3, "Creating Type Instances" section, page 88</h2>
+
+<h3>Found by:  Paul Bates</h3>
+<h3>Added:  11/18/2002</h3>
+
+<p>
+Change this:
+</p>
+
+<p>
+stloc.1<br/>
+//  Set newBT = null<br/>
+ldnull<br/>
+stloc.1
+</p>
+
+<p>
+to this:
+</p>
+
+<p>
+<b>stloc.0</b><br/>
+//  Set newBT = null<br/>
+ldnull<br/>
+<b>stloc.0</b>
+</p>
+
+<h2>Chapter 3, "Constructors" section, page 91</h2>
+
+<h3>Found by:  Jesse Liberty</h3>
+<h3>Added:  08/15/2002</h3>
+
+<p>
+The wording in the second paragraph is a little confusing.  Change this:
+</p>
+
+<p>
+"In the default constructor, a base class's constructor needs to be called as well."
+</p>
+
+<p>
+to this:
+</p>
+
+<p>
+"In <b>any constructor, you need to call a constructor on your base class.  This can be the default, no-argument constructor or a custom constructor.  It doesn't matter where you make this base class constuctor call so long as it's done before the constructor is finished (although I'd recommend making it the first line of code in the constructor so you don't forget about it).</b>"
+</p>
+
+<p>
+In future printings I'll also have a reference to Section 1.8.1.4 of Partition III here.
+</p>
+
+<h2>Chapter 4, "Field Definitions" section, page 125</h2>
+
+<h3>Found by:  Louis Gutnicki</h3>
+<h3>Added:  11/18/2002</h3>
+
+<p>
+Change this:
+</p>
+
+<p>
+.field private class RIG.RandomValues/RandomDelegate m_NewRandom
+</p>
+
+<p>
+to this:
+</p>
+
+<p>
+.field private class RIG.RandomValues/RandomDelegate <b>NewRandom</b>
+</p>
+
+<h2>Chapter 6, "The VB .NET Implementation" section, page 199</h2>
+
+<h3>Found by:  Jurgen Piller</h3>
+<h3>Added:  08/15/2002</h3>
+
+<p>
+Change the caption for Listing 6.3 from this:
+</p>
+
+<p>
+Listing 6-3. VB .NET Compilation Results in Release Mode with Optimizations
+</p>
+
+<p>
+to this:
+</p>
+
+<p>
+Listing 6-3. VB .NET Compilation Results in Release Mode with <b>no</b> Optimizations
+</p>
+
+<h2>Chapter 8, "Base Method Invocation Setup" section, page 296</h2>
+
+<h3>Found by:  Justin Rudd</h3>
+<h3>Added:  11/18/2002</h3>
+
+<p>
+Change the code from this:
+</p>
+
+<p>
+Type.GetType(paramTypeName)
+</p>
+
+<p>
+to this:
+</p>
+
+<p>
+Type.GetType(paramTypeName<b> + ", " + pi.ParameterType.Assembly.FullName</b>);
+</p>
+
+<h6>Last Modified:  11/18/2002</h6>
